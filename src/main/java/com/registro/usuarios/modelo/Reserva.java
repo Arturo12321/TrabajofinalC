@@ -18,7 +18,6 @@ public class Reserva {
 		private String fecha;
 		@NotNull
 		private int hora;
-		
 		private double mon;
 		private double nasi;
 		public Long getId() {
