@@ -19,11 +19,8 @@ public class PasajeService {
 	public Pasaje buscar (Long id) {
 		return iPasaje.findById(id);
 	}
-	public Pasaje buscar (Integer Asiento) {
-		return iPasaje.findByAsiento(Asiento);
-	}
-	public Pasaje buscar (String Clase) {
-		return iPasaje.findByClase(Clase);
+	public Pasaje buscar (String clase) {
+		return iPasaje.findByClase(clase);
 	}
 	public boolean eliminar(Long id) {
 		try {

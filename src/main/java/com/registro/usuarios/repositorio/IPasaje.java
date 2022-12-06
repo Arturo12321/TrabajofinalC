@@ -6,7 +6,6 @@ import com.registro.usuarios.modelo.Pasaje;
 @Repository
 public interface IPasaje extends JpaRepository<Pasaje, Serializable>{
 	public abstract Pasaje findById(Long id);
-	public abstract Pasaje findByAsiento(Integer Asiento);
 	public abstract Pasaje findByClase(String Clase);
 }
 	

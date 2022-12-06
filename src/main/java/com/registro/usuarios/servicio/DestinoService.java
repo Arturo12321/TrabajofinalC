@@ -19,8 +19,8 @@ public class DestinoService {
 	public Destino buscar (Long id) {
 		return iDestino.findById(id);
 	}
-	public Destino buscar (String ciudad_dest) {
-		return iDestino.findByDestino(ciudad_dest);
+	public Destino buscar (String ciudad) {
+		return iDestino.findByCiudad(ciudad);
 	}
 	public boolean eliminar(Long id) {
 		try {

@@ -8,6 +8,6 @@ import com.registro.usuarios.modelo.Destino;
 @Repository
 public interface IDestino extends JpaRepository<Destino, Serializable>{
 	public abstract Destino findById(Long id);
-	public abstract Destino findByDestino(String ciudad_dest);
+	public abstract Destino findByCiudad(String destino);
 
 }
