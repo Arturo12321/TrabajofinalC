@@ -21,7 +21,7 @@ import com.registro.usuarios.servicio.ReservaService;
 
 
 @Controller
-@RequestMapping("/reserva")
+@RequestMapping("/reservas")
 @SessionAttributes("reserva")
 public class ReservaController {
 	@Autowired
@@ -42,8 +42,8 @@ public class ReservaController {
 	
 	@RequestMapping("/listar")
 	public String listar(Model model) {
-		List<Reserva> reserva = reservaService.listar();
-		model.addAttribute("reserva",reserva);
+		List<Reserva> reservas = reservaService.listar();
+		model.addAttribute("reservas",reservas);
 		model.addAttribute("titulo","Lista de Reserva");
 		return "reservaListar";
 	}
@@ -53,9 +53,9 @@ public class ReservaController {
 		Reserva reserva= new Reserva();
 		model.addAttribute("reserva", reserva);
 		model.addAttribute("destino", destinoService.listar());
-		model.addAttribute("clientes", pasajeService.listar());
-		model.addAttribute("clientes", compañiaService.listar());
-		model.addAttribute("btn", "Registrar Venta");
+		model.addAttribute("pasaje", pasajeService.listar());
+		model.addAttribute("compañia", compañiaService.listar());
+		model.addAttribute("btn", "Registrar reserva");
 		return "reservaForm";
 	}
 	@RequestMapping(value="/insertar",method=RequestMethod.POST)
@@ -82,7 +82,7 @@ public class ReservaController {
 			}
 		} catch (Exception e) {
 		}
-		return "redirect:/reserva/listar";
+		return "redirect:/reservas/listar";
 	}
 	
 	@RequestMapping("/form/{id}")
@@ -98,6 +98,6 @@ public class ReservaController {
 	@RequestMapping("/eliminar/{id}")
 	public String eliminar(@PathVariable("id") Long id) {
 		reservaService.eliminar(id);
-		return "redirect:/reserva/listar";
+		return "redirect:/reservas/listar";
 	}
 }

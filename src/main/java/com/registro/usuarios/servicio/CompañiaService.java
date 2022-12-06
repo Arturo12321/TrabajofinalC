@@ -7,7 +7,7 @@ import com.registro.usuarios.repositorio.ICompañia;
 @Service("compañia")
 public class CompañiaService {
 	@Autowired
-	private ICompañia iCompañia;
+	ICompañia iCompañia;
 	public void guardar(Compañia compañia) {
 		iCompañia.save(compañia);
 	}

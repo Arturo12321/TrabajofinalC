@@ -23,11 +23,11 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr th:each="cliente : ${destino}">
+								<tr th:each="destino : ${destinos}">
 									<th scope="row" th:text="${destino.id}"></th>
-									<td th:text="${destino.ciudad_dest}"></td>
+									<td th:text="${destino.ciudad}"></td>
 									<td th:text="${destino.cost_dest}"></td>
-									<td th:text="${destin.nAero}"></td>
+									<td th:text="${destino.nAero}"></td>
 									<td><a class="btn btn-warning"
 										th:href="@{/destinos/form/} +${destino.id}" th:text="Editar"></a></td>
 									<td><a class="btn btn-danger"

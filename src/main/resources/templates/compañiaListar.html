@@ -31,7 +31,7 @@
 									<td th:text="${compañia.telefono}"></td>
 									<td th:text="${compañia.ruc}"></td>
 									<td><a class="btn btn-warning"
-										th:href="@{/compañias/form/} +${compañias.id}" th:text="Editar"></a></td>
+										th:href="@{/compañias/form/} +${compañia.id}" th:text="Editar"></a></td>
 									<td><a class="btn btn-danger"
 										th:href="@{/compañias/eliminar/} +${compañia.id}" th:text="Eliminar" onclick="returnconfirm('Estas seguro de eliminar')"></a></td>
 								</tr>
