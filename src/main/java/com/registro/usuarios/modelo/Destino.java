@@ -13,9 +13,9 @@ public class Destino {
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		private Long id;
 		@NotNull
-		private String ciudad_dest;
+		private String ciudad;
 		@NotNull
-		private String cost_dest;
+		private Double cost_dest;
 		@NotNull
 		private Integer nAero;
 		
@@ -26,15 +26,15 @@ public class Destino {
 			this.id = id;
 		}
 		public String getCiudad_dest() {
-			return ciudad_dest;
+			return ciudad;
 		}
-		public void setCiudad_dest(String ciudad_dest) {
-			this.ciudad_dest = ciudad_dest;
+		public void setCiudad_dest(String ciudad) {
+			this.ciudad = ciudad;
 		}
-		public String getCost_dest() {
+		public Double getCost_dest() {
 			return cost_dest;
 		}
-		public void setCost_dest(String cost_dest) {
+		public void setCost_dest(Double cost_dest) {
 			this.cost_dest = cost_dest;
 		}
 		public Integer getnAero() {
@@ -45,7 +45,7 @@ public class Destino {
 		}
 		@Override
 		public String toString() {
-			return "Destino [id=" + id + ", ciudad_dest=" + ciudad_dest + ", cost_dest=" + cost_dest + ", nAero="
+			return "Destino [id=" + id + ", ciudad=" + ciudad + ", cost_dest=" + cost_dest + ", nAero="
 					+ nAero + "]";
 		}
 		

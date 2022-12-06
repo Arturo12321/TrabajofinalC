@@ -13,9 +13,9 @@ public class Pasaje {
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		private Long id;
 		@NotNull
-		private String Clase;
+		private String clase;
 		@NotNull
-		private int Asiento;
+		private int asiento;
 		@NotNull
 		private int valor;
 		
@@ -26,16 +26,16 @@ public class Pasaje {
 			this.id = id;
 		}
 		public String getClase() {
-			return Clase;
+			return clase;
 		}
 		public void setClase(String clase) {
-			Clase = clase;
+			this.clase = clase;
 		}
 		public int getAsiento() {
-			return Asiento;
+			return asiento;
 		}
 		public void setAsiento(int asiento) {
-			Asiento = asiento;
+			this.asiento = asiento;
 		}
 		public int getValor() {
 			return valor;
@@ -45,7 +45,7 @@ public class Pasaje {
 		}
 		@Override
 		public String toString() {
-			return "Pasaje [id=" + id + ", Clase=" + Clase + ", Asiento=" + Asiento + ", valor=" + valor + "]";
+			return "Pasaje [id=" + id + ", Clase=" + clase + ", Asiento=" + asiento + ", valor=" + valor + "]";
 		}
 		
 		

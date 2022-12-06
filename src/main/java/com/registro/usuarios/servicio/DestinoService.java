@@ -1,5 +1,7 @@
 package com.registro.usuarios.servicio;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.registro.usuarios.modelo.Destino;
@@ -17,8 +19,8 @@ public class DestinoService {
 	public Destino buscar (Long id) {
 		return iDestino.findById(id);
 	}
-	public Destino buscar (String ciudad_dest) {
-		return iDestino.findByDestino(ciudad_dest);
+	public Destino buscar (String ciudad) {
+		return iDestino.findByCiudad(ciudad);
 	}
 	public boolean eliminar(Long id) {
 		try {
