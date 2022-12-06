@@ -27,7 +27,8 @@
 								<tr th:each="compañia : ${compañias}">
 									<th scope="row" th:text="${compañia.id}"></th>
 									<td th:text="${compañia.nombres}"></td>
-									<td th:text="${compañia.apellidos}"></td>
+									<td th:text="${compañia.direcion}"></td>
+									<td th:text="${compañia.telefono}"></td>
 									<td th:text="${compañia.ruc}"></td>
 									<td><a class="btn btn-warning"
 										th:href="@{/compañias/form/} +${compañias.id}" th:text="Editar"></a></td>
