@@ -26,7 +26,7 @@ public class CompañiaControlador {
 	@RequestMapping("/listar")
 	public String listar (Model model ) {
 		List<Compañia> compañias =compañiaService.listar();
-		model.addAttribute("compañia",compañias);
+		model.addAttribute("compañias",compañias);
 		model.addAttribute("titulo","Lista de Compañias");
 		return "compañiaListar";
 	}

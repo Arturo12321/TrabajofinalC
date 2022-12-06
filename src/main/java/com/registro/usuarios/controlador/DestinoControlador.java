@@ -26,7 +26,7 @@ public class DestinoControlador {
 	@RequestMapping("/listar")
 	public String listar (Model model ) {
 		List<Destino> destinos =destinoService.listar();
-		model.addAttribute("destino",destinos);
+		model.addAttribute("destinos",destinos);
 		model.addAttribute("titulo","Lista de Destinos");
 		return "destinoListar";
 	}

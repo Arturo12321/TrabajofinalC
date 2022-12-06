@@ -26,7 +26,7 @@ public class PasajeControlador {
 	@RequestMapping("/listar")
 	public String listar (Model model ) {
 		List<Pasaje> pasajes =pasajeService.listar();
-		model.addAttribute("pasaje",pasajes);
+		model.addAttribute("pasajes",pasajes);
 		model.addAttribute("titulo","Lista de Pasajes");
 		return "pasajeListar";
 	}
