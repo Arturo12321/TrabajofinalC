@@ -12,7 +12,7 @@
 				<div class="card-body">
 				<h3 th:if="ERROR!=null" th:text="${ERROR}" style="color:red"></h3>		
 				
-					<form th:action="@{/pasajes/insertar}" th:objecto="${pasaje}" method="POST">
+					<form th:action="@{/pasajes/insertar}" th:object="${pasaje}" method="POST">
 						<div class="form-group">
 							<label for="clase">Clase</label>	
 							<input type="text" class="form-control" th:field="*{clase}" name="clase">
