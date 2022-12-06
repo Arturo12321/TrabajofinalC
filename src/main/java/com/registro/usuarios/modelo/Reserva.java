@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import com.sun.istack.NotNull;
 
 @Entity
-@Table(name="RSERVAS")
+@Table(name="RESERVAS")
 public class Reserva {
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
