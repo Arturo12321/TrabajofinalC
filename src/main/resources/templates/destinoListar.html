@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout/template :: header">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<nav th:replace="/layout/template :: navegacion"></nav>
+			<div class="card mt-5">
+				<div class="card-header"></div>
+				<div class="card-body">
+				<a class="btn btn-primary" href="/destinos/form">Registrar destino</a>
+				<table class="table mt-3">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">ID</th>
+									<th scope="col">CIUDAD DESTINO</th>
+									<th scope="col">COSTO DESTINO </th>
+									<th scope="col">NUMERO DE AEROPUERTO</th>
+									<th scope="col">EDITAR</th>
+									<th scope="col">ELIMINAR</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="cliente : ${destino}">
+									<th scope="row" th:text="${destino.id}"></th>
+									<td th:text="${destino.ciudad_dest}"></td>
+									<td th:text="${destino.cost_dest}"></td>
+									<td th:text="${destin.nAero}"></td>
+									<td><a class="btn btn-warning"
+										th:href="@{/destinos/form/} +${destino.id}" th:text="Editar"></a></td>
+									<td><a class="btn btn-danger"
+										th:href="@{/destinos/eliminar/} +${destino.id}" th:text="Eliminar" onclick="returnconfirm('Estas seguro de eliminar')"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+			</div>
+		</div>		
+	</div>
+</div>
+</body>
+</html>		
