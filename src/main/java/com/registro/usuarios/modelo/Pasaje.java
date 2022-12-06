@@ -45,7 +45,7 @@ public class Pasaje {
 		}
 		@Override
 		public String toString() {
-			return "Pasaje [id=" + id + ", Clase=" + clase + ", Asiento=" + asiento + ", valor=" + valor + "]";
+			return "Pasaje [id=" + id + ", clase=" + clase + ", asiento=" + asiento + ", valor=" + valor + "]";
 		}
 		
 		

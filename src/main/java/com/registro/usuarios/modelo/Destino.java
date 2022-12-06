@@ -19,30 +19,47 @@ public class Destino {
 		@NotNull
 		private Integer nAero;
 		
+		
 		public Long getId() {
 			return id;
 		}
+
+
 		public void setId(Long id) {
 			this.id = id;
 		}
-		public String getCiudad_dest() {
+
+
+		public String getCiudad() {
 			return ciudad;
 		}
-		public void setCiudad_dest(String ciudad) {
+
+
+		public void setCiudad(String ciudad) {
 			this.ciudad = ciudad;
 		}
+
+
 		public Double getCost_dest() {
 			return cost_dest;
 		}
+
+
 		public void setCost_dest(Double cost_dest) {
 			this.cost_dest = cost_dest;
 		}
+
+
 		public Integer getnAero() {
 			return nAero;
 		}
+
+
 		public void setnAero(Integer nAero) {
 			this.nAero = nAero;
 		}
+
+
 		@Override
 		public String toString() {
 			return "Destino [id=" + id + ", ciudad=" + ciudad + ", cost_dest=" + cost_dest + ", nAero="
