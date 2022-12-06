@@ -25,8 +25,8 @@
 							<tbody>
 								<tr th:each="pasaje : ${pasajes}">
 									<th scope="row" th:text="${pasaje.id}"></th>
-									<td th:text="${pasaje.clase}"></td>
-									<td th:text="${pasaje.asiento}"></td>
+									<td th:text="${pasaje.Clase}"></td>
+									<td th:text="${pasaje.Asiento}"></td>
 									<td th:text="${pasaje.valor}"></td>
 									<td><a class="btn btn-warning"
 										th:href="@{/pasajes/form/} +${pasajes.id}" th:text="Editar"></a></td>
