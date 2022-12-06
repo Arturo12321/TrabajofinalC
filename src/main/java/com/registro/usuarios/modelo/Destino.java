@@ -15,7 +15,7 @@ public class Destino {
 		@NotNull
 		private String ciudad_dest;
 		@NotNull
-		private String cost_dest;
+		private Double cost_dest;
 		@NotNull
 		private Integer nAero;
 		
@@ -31,10 +31,10 @@ public class Destino {
 		public void setCiudad_dest(String ciudad_dest) {
 			this.ciudad_dest = ciudad_dest;
 		}
-		public String getCost_dest() {
+		public Double getCost_dest() {
 			return cost_dest;
 		}
-		public void setCost_dest(String cost_dest) {
+		public void setCost_dest(Double cost_dest) {
 			this.cost_dest = cost_dest;
 		}
 		public Integer getnAero() {
