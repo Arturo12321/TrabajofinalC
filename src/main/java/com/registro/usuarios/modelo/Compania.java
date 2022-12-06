@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import com.sun.istack.NotNull;
 @Entity
-@Table(name="COMPAÑIAS")
-public class Compañia {
+@Table(name="COMPANIAS")
+public class Compania {
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		private Long id;
@@ -54,7 +54,7 @@ public class Compañia {
 		}
 		@Override
 		public String toString() {
-			return "Compañia [id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono
+			return "Compania [id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono
 					+ ", ruc=" + ruc + "]";
 		}
 		

@@ -10,7 +10,7 @@
 			<div class="card mt-5">
 				<div class="card-header"></div>
 				<div class="card-body">
-				<a class="btn btn-primary" href="/compañias/form">Registrar Compañia</a>
+				<a class="btn btn-primary" href="/companias/form">Registrar Compañia</a>
 						<table class="table mt-3">
 							<thead class="thead-dark">
 								<tr>
@@ -24,16 +24,16 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr th:each="compañia : ${compañias}">
-									<th scope="row" th:text="${compañia.id}"></th>
-									<td th:text="${compañia.nombre}"></td>
-									<td th:text="${compañia.direcion}"></td>
-									<td th:text="${compañia.telefono}"></td>
-									<td th:text="${compañia.ruc}"></td>
+								<tr th:each="compania : ${companias}">
+									<th scope="row" th:text="${compania.id}"></th>
+									<td th:text="${compania.nombre}"></td>
+									<td th:text="${compania.direccion}"></td>
+									<td th:text="${compania.telefono}"></td>
+									<td th:text="${compania.ruc}"></td>
 									<td><a class="btn btn-warning"
-										th:href="@{/compañias/form/} +${compañia.id}" th:text="Editar"></a></td>
+										th:href="@{/companias/form/} +${compania.id}" th:text="Editar"></a></td>
 									<td><a class="btn btn-danger"
-										th:href="@{/compañias/eliminar/} +${compañia.id}" th:text="Eliminar" onclick="returnconfirm('Estas seguro de eliminar')"></a></td>
+										th:href="@{/companias/eliminar/} +${compania.id}" th:text="Eliminar" onclick="returnconfirm('Estas seguro de eliminar')"></a></td>
 								</tr>
 							</tbody>
 						</table>

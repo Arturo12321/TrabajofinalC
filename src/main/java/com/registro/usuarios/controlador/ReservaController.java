@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.registro.usuarios.modelo.Destino;
 import com.registro.usuarios.modelo.Reserva;
-import com.registro.usuarios.servicio.CompañiaService;
+import com.registro.usuarios.servicio.CompaniaService;
 import com.registro.usuarios.servicio.DestinoService;
 import com.registro.usuarios.servicio.PasajeService;
 import com.registro.usuarios.servicio.ReservaService;
@@ -37,8 +37,8 @@ public class ReservaController {
 	PasajeService pasajeService;
 	
 	@Autowired
-	@Qualifier("compañia")
-	CompañiaService compañiaService;
+	@Qualifier("compania")
+	CompaniaService companiaService;
 	
 	@RequestMapping("/listar")
 	public String listar(Model model) {
@@ -54,7 +54,7 @@ public class ReservaController {
 		model.addAttribute("reserva", reserva);
 		model.addAttribute("destino", destinoService.listar());
 		model.addAttribute("pasaje", pasajeService.listar());
-		model.addAttribute("compañia", compañiaService.listar());
+		model.addAttribute("compania", companiaService.listar());
 		model.addAttribute("btn", "Registrar reserva");
 		return "reservaForm";
 	}
@@ -76,7 +76,7 @@ public class ReservaController {
 				model.addAttribute("reserva", reserva);
 				model.addAttribute("destino", destinoService.listar());
 				model.addAttribute("pasaje", pasajeService.listar());
-				model.addAttribute("compañia", compañiaService.listar());
+				model.addAttribute("compania", companiaService.listar());
 				model.addAttribute("btn", "Registrar Reserva");
 				return "reservaForm";
 			}
@@ -90,7 +90,7 @@ public class ReservaController {
 		model.addAttribute("reserva", reservaService.buscar(id));
 		model.addAttribute("destino", destinoService.listar());
 		model.addAttribute("pasaje", pasajeService.listar());
-		model.addAttribute("compañia", compañiaService.listar());
+		model.addAttribute("compania", companiaService.listar());
 		model.addAttribute("btn","Actualiza Registro");
 		return "reservaForm";
 	}
